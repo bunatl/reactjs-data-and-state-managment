@@ -1,0 +1,71 @@
+@mixin flex($direction, $wrap, $justify){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+}
+
+*{
+    border: 1px solid black;
+}
+body{
+    margin: 0;
+}
+
+#root{
+    @include flex(column, nowrap, space-between);
+    height: 100vh;
+    align-items: stretch;
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    height: 100%;
+    flex: 1;
+
+    .data{
+        @include flex(row, wrap, space-around);
+        min-height: 5em;
+        
+        >div{
+            display: flex;
+            width: 33%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .content{
+        @include flex(row, wrap, space-around);
+        align-items: stretch;
+        
+        >div{
+            border: 3px solid darkgray;
+            padding: 2em;
+            width: 25%;
+            // height: 100%;
+
+            >h2{
+                text-align: center;
+            }
+
+            .contentData{
+                // min-height: 100%;
+            }
+
+            .contentRenders{
+                text-align: center;
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
