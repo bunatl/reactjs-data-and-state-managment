@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ContextProvider } from './contextProvider/ContextProvider'
+
 // component imports
 import Data from './main/Data'
 import Content from './main/Content'
@@ -9,8 +11,10 @@ function App() {
     <>
       <header><h1>State managment app</h1></header>
       <main>
-        <Data />
-        <Content />
+        <ContextProvider>
+          <Data />
+          <Content />
+        </ContextProvider>
       </main>
       <footer>
         Lukas Bunat

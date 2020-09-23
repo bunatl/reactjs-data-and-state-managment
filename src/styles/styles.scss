@@ -31,10 +31,19 @@ main{
         min-height: 5em;
         
         >div{
-            display: flex;
             width: 33%;
-            align-items: center;
-            justify-content: center;
+  
+            // inside div - first div
+            >*{
+                width: 60%;
+                margin: 0 auto;
+
+                >*{
+                    margin-top: .75em;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -52,9 +61,7 @@ main{
                 text-align: center;
             }
 
-            .contentData{
-                // min-height: 100%;
-            }
+            .contentData{ }
 
             .contentRenders{
                 text-align: center;
