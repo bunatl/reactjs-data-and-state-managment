@@ -10,7 +10,7 @@ function Hooks() {
         <div>
             <h2>Hooks</h2>
             <div className="contentCounter">Context counter state: {contextData.counter}</div>
-            <div className="contentRenders" style={{ marginTop: "2em" }}>Total renders: {renderCounter.current++}</div>
+            <div className="contentRenders">Total renders: {renderCounter.current++}</div>
         </div>
     );
 }

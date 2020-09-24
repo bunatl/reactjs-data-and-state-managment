@@ -5,9 +5,6 @@
     justify-content: $justify;
 }
 
-*{
-    border: 1px solid black;
-}
 body{
     margin: 0;
 }
@@ -23,46 +20,36 @@ header{
 }
 
 main{
+    @include flex(row, wrap, space-around);
     height: 100%;
-    flex: 1;
+    // flex: 1;
+    margin: 0 auto;
+    max-width: 900px;
 
     .data{
-        @include flex(row, wrap, space-around);
+        @include flex(column, wrap, space-around);
         min-height: 5em;
-        
-        >div{
-            width: 33%;
-  
-            // inside div - first div
-            >*{
-                width: 70%;
-                margin: 0 auto;
-
-                >*{
-                    margin-top: .75em;
-                    box-sizing: border-box;
-                    width: 100%;
-                }
-            }
-        }
+        width: 40%;
     }
 
     .content{
-        @include flex(row, wrap, space-around);
-        align-items: stretch;
+        @include flex(column, wrap, space-around);
+        // align-items: stretch;
+        width: 40%;
         
         >div{
             border: 3px solid darkgray;
             padding: 2em;
-            width: 25%;
+            // width: 25%;
 
             >h2{
+                margin-top: 0;
                 text-align: center;
             }
 
             .contentCounter{
                 text-align: center;
-                font-size: 1.15em;
+                font-size: 1.2em;
             }
 
             .contentRenders{
@@ -71,10 +58,28 @@ main{
             }
         }
     }
+
+    .controls{
+        @include flex(row, wrap, space-around);
+        font-size: 1.25em;
+        
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+        }
+    }
 }
 
 footer{
     text-align: center;
     padding-top: 1em;
     padding-bottom: 2em;
+
+    a{
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
 }

@@ -10,7 +10,7 @@ function Redux() {
         <div>
             <h2>Redux</h2>
             <div className="contentCounter">Redux counter state: {reduxCounter}</div>
-            <div className="contentRenders" style={{ marginTop: "2em" }}>Total renders: {renderCounter.current++}</div>
+            <div className="contentRenders">Total renders: {renderCounter.current++}</div>
         </div>
     );
 }

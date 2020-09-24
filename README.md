@@ -10,6 +10,8 @@ Simple desktop app that showing difference between useContext hook, Redux state 
 - useContext, useReducer
 - redux
 - SCSS
+
+### To implement
 - GraphQL
 - webpack
 
