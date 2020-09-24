@@ -35,7 +35,7 @@ main{
   
             // inside div - first div
             >*{
-                width: 60%;
+                width: 70%;
                 margin: 0 auto;
 
                 >*{
@@ -55,13 +55,15 @@ main{
             border: 3px solid darkgray;
             padding: 2em;
             width: 25%;
-            // height: 100%;
 
             >h2{
                 text-align: center;
             }
 
-            .contentData{ }
+            .contentCounter{
+                text-align: center;
+                font-size: 1.15em;
+            }
 
             .contentRenders{
                 text-align: center;

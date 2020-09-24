@@ -1,4 +1,4 @@
-import React, { createContext, FC, useReducer } from 'react'
+import React, { createContext, FC, useMemo, useReducer } from 'react'
 
 
 type ReducerActions =
@@ -67,9 +67,10 @@ const reducer = (state: IData = initData, action: ReducerActions) => {
 export const GlobalContext = createContext<any>({});
 export const ContextProvider: FC = ({ children }) => {
     const [ contextData, dispatch ] = useReducer(reducer, initData);
+    const providerValue = useMemo(() => ({ contextData, dispatch }), [ contextData, dispatch ])
 
     return (
-        <GlobalContext.Provider value={{ contextData, dispatch }}>
+        <GlobalContext.Provider value={providerValue}>
             {children}
         </GlobalContext.Provider>
     )
